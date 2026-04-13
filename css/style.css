@@ -597,6 +597,44 @@ section {
   line-height: 1.8;
 }
 
+.resume-cta {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.resume-cta p {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c9a84c !important;
+  text-decoration: none !important;
+  border: 1px solid #c9a84c;
+  padding: 0.85rem 2rem;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  background: transparent;
+}
+
+.resume-btn:hover {
+  background: #c9a84c;
+  color: #0a0a0a !important;
+  text-decoration: none !important;
+}
+
 /* CONTACT */
 #contact {
   padding: 6rem 4rem 8rem;
