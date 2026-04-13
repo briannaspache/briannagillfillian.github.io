@@ -635,6 +635,70 @@ section {
   text-decoration: none !important;
 }
 
+/* PRESS */
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.press-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  text-decoration: none !important;
+  color: var(--text);
+  transition: border-color 0.2s, background 0.2s, padding-top 0.2s;
+  min-height: 140px;
+}
+
+.press-tile:hover {
+  border-color: var(--gold);
+  background: var(--surface2);
+}
+
+.press-tile-outlet {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.press-tile-title {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1.4;
+  flex: 1;
+  margin-bottom: 0.75rem;
+}
+
+.press-tile-year {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  display: block;
+}
+
+.press-tile:hover .press-tile-year {
+  color: var(--gold);
+}
+
+@media (max-width: 900px) {
+  .press-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .press-grid { grid-template-columns: 1fr; }
+}
+
 /* CONTACT */
 #contact {
   padding: 6rem 4rem 8rem;
