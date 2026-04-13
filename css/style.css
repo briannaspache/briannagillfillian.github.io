@@ -150,27 +150,30 @@ nav {
 }
 
 .hero-cta {
-  display: inline-flex;     /* Makes it behave like a solid container */
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
-  padding: 12px 32px;      /* This creates the button 'box' */
+  gap: 0.75rem;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold) !important;
-  border: 1px solid var(--gold);
-  background-color: transparent !important; /* Forces the highlight to disappear */
+  color: #c9a84c !important;
   text-decoration: none !important;
-  transition: all 0.3s ease;
+  border: 1px solid #c9a84c;
+  padding: 0.85rem 2rem;
+  transition: background 0.2s, color 0.2s;
   cursor: pointer;
+  background: transparent;
 }
 
-.hero-cta:hover {
-  background-color: var(--gold) !important;
-  color: var(--bg) !important;
-  transform: translateY(-3px); /* Subtle lift effect */
+.hero-cta:hover,
+.hero-cta:visited,
+.hero-cta:active,
+.hero-cta:focus {
+  background: #c9a84c;
+  color: #0a0a0a !important;
+  text-decoration: none !important;
+  outline: none;
 }
 
 .hero-scroll {
@@ -376,6 +379,108 @@ section {
   content: '—';
   color: var(--text-dim);
   font-size: 0.7rem;
+}
+
+/* PHILANTHROPY */
+#philanthropy-section {
+  padding: 6rem 4rem;
+  border-top: 1px solid var(--border);
+}
+
+.philanthropy-intro {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  line-height: 1.8;
+  margin-bottom: 3.5rem;
+}
+
+.philanthropy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.philanthropy-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+  overflow: hidden;
+}
+
+.philanthropy-card:hover {
+  border-color: var(--border-hover);
+}
+
+.philanthropy-img-wrap {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.philanthropy-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.philanthropy-card:hover .philanthropy-img-wrap img {
+  transform: scale(1.04);
+}
+
+.philanthropy-caption {
+  padding: 1.25rem;
+}
+
+.philanthropy-year {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.philanthropy-caption h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.philanthropy-caption p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-family: var(--font-mono);
+}
+
+.philanthropy-social {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  margin-top: 1rem;
+}
+
+.philanthropy-social a {
+  color: var(--gold);
+}
+
+@media (max-width: 900px) {
+  .philanthropy-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .philanthropy-grid { grid-template-columns: 1fr; }
 }
 
 /* PROJECTS */
