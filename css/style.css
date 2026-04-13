@@ -116,7 +116,7 @@ nav {
   font-weight: 300;
   line-height: 1.0;
   letter-spacing: -0.02em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero-name em {
@@ -153,19 +153,24 @@ nav {
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
-  text-decoration: none;
+  color: var(--gold) !important;
+  text-decoration: none !important;
   border: 1px solid var(--gold);
   padding: 0.85rem 2rem;
   transition: background 0.2s, color 0.2s;
   cursor: pointer;
   background: transparent;
+  -webkit-appearance: none;
 }
 
-.hero-cta:hover {
+.hero-cta:hover,
+.hero-cta:visited,
+.hero-cta:active,
+.hero-cta:focus {
   background: var(--gold);
-  color: var(--bg);
-  text-decoration: none;
+  color: var(--bg) !important;
+  text-decoration: none !important;
+  outline: none;
 }
 
 .hero-scroll {
