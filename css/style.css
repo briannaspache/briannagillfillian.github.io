@@ -16,7 +16,9 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-a { text-decoration: none; color: inherit; }
+a { text-decoration: none; }
+
+a:not(.hero-cta):not(.nav-logo):not(.contact-link) { color: inherit; }
 
 html { scroll-behavior: smooth; }
 
@@ -155,22 +157,21 @@ nav {
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold) !important;
+  color: #c9a84c !important;
   text-decoration: none !important;
-  border: 1px solid var(--gold);
+  border: 1px solid #c9a84c;
   padding: 0.85rem 2rem;
   transition: background 0.2s, color 0.2s;
   cursor: pointer;
   background: transparent;
-  -webkit-appearance: none;
 }
 
 .hero-cta:hover,
 .hero-cta:visited,
 .hero-cta:active,
 .hero-cta:focus {
-  background: var(--gold);
-  color: var(--bg) !important;
+  background: #c9a84c;
+  color: #0a0a0a !important;
   text-decoration: none !important;
   outline: none;
 }
