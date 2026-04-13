@@ -150,25 +150,27 @@ nav {
 }
 
 .hero-cta {
-  display: inline-block; /* Crucial for making it look like a button */
-  margin-top: 1.5rem;
-  padding: 0.85rem 2.5rem;
+  display: inline-flex;     /* Makes it behave like a solid container */
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 12px 32px;      /* This creates the button 'box' */
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--gold) !important; 
+  color: var(--gold) !important;
   border: 1px solid var(--gold);
+  background-color: transparent !important; /* Forces the highlight to disappear */
   text-decoration: none !important;
   transition: all 0.3s ease;
-  background: transparent;
   cursor: pointer;
 }
 
 .hero-cta:hover {
-  background: var(--gold);
+  background-color: var(--gold) !important;
   color: var(--bg) !important;
-  transform: translateY(-2px); /* Gives it a little "lift" */
+  transform: translateY(-3px); /* Subtle lift effect */
 }
 
 .hero-scroll {
